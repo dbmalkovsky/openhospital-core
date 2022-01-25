@@ -512,6 +512,18 @@
 			<type>pom</type>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- HAPI -->
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-base</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v231</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<!-- HAPI -->
 	</dependencies>
 
 	<repositories>

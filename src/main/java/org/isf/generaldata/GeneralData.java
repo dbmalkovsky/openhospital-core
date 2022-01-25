@@ -86,6 +86,7 @@ public final class GeneralData extends ConfigurationProperties {
 	public static boolean ALLOWMULTIPLEOPENEDBILL;
 	public static String PATIENTBILLGROUPED;
 	public static String PATIENTBILLSTATEMENT;
+	public static boolean HL7ENABLED;
 	public static boolean DEBUG;
 
 	private static final String DEFAULT_LANGUAGE = "en";
@@ -130,6 +131,7 @@ public final class GeneralData extends ConfigurationProperties {
 	private static final boolean DEFAULT_ALLOWMULTIPLEOPENEDBILL = false;
 	private static final String DEFAULT_PATIENTBILLGROUPED = "PatientBillGrouped";
 	private static final String DEFAULT_PATIENTBILLSTATEMENT = "PatientBillStatement";
+	private static final boolean DEFAULT_HL7ENABLED = false;
 	private static final boolean DEFAULT_DEBUG = false;
 
 	private static GeneralData mySingleData;
@@ -168,7 +170,9 @@ public final class GeneralData extends ConfigurationProperties {
 		LABMULTIPLEINSERT = myGetProperty("LABMULTIPLEINSERT", DEFAULT_LABMULTIPLEINSERT);
 		INTERNALPHARMACIES = myGetProperty("INTERNALPHARMACIES", DEFAULT_INTERNALPHARMACIES);
 		INTERNALVIEWER = myGetProperty("INTERNALVIEWER", DEFAULT_INTERNALVIEWER);
-		if (!INTERNALVIEWER) VIEWER = myGetProperty("INTERNALVIEWER");
+		if (!INTERNALVIEWER) {
+			VIEWER = myGetProperty("INTERNALVIEWER");
+		}
 		DOC_DIR = myGetProperty("DOC_DIR", DEFAULT_DOC_DIR);
 		MERGEFUNCTION = myGetProperty("MERGEFUNCTION", DEFAULT_MERGEFUNCTION);
 		SMSENABLED = myGetProperty("SMSENABLED", DEFAULT_SMSENABLED);
@@ -184,6 +188,7 @@ public final class GeneralData extends ConfigurationProperties {
 		ALLOWMULTIPLEOPENEDBILL = myGetProperty("ALLOWMULTIPLEOPENEDBILL", DEFAULT_ALLOWMULTIPLEOPENEDBILL);
 		PATIENTBILLGROUPED = myGetProperty("PATIENTBILLGROUPED", DEFAULT_PATIENTBILLGROUPED);
 		PATIENTBILLSTATEMENT = myGetProperty("PATIENTBILLSTATEMENT", DEFAULT_PATIENTBILLSTATEMENT);
+		HL7ENABLED = myGetProperty("HL7ENABLED", DEFAULT_HL7ENABLED);
 		DEBUG = myGetProperty("DEBUG", DEFAULT_DEBUG);
 			
 	}
